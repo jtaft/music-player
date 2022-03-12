@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{it.currentdir}}</title>
+  </head>
+  <body style="font-size: xx-large;">
+
+    <script type="text/javascript" src="/javascripts/file.js" ></script>
+    <audio id="audio" hidden controls autoplay>
+      <source src="" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
+    <button id="play-all" style="height: 98px; width: 333px; font-size: 32" onclick='playallbuttonclick("{{it.files}}", "{{it.currentdir}}")'>Play All</button>
+    <ul>
+    {{it.filesHtml | safe}}
+    </ul>
+    <br>
+    <ul>
+    {{it.foldersHtml | safe}}
+    </ul>
+  </body>
+</html>

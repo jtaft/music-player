@@ -1,0 +1,2 @@
+sudo docker build --tag music-player .
+sudo docker run --detach --publish 3000:3000 music-player
