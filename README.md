@@ -21,6 +21,13 @@ example POST:
 }
 ```
 
+```
+curl --location --request POST 'http://localhost:3000/album' \
+--form 'file=@"/E:/Music/zips/1999_digital_album_remastered.zip"' \
+--form 'Artist="Prince"' \
+--form 'Title="1999"'
+```
+
 It will take a zip and try to create a folder for the album in the form of "Artist > Title" so this album would be found at "/public/Prince/1999/" if Artist and Title are undefined it will save to /public
 
 viewing the webplayer is at localhost:3000 or localhost:3000/public
