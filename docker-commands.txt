@@ -1,2 +1,8 @@
 sudo docker build --tag music-player .
-sudo docker run --detach --publish 3000:3000 music-player
+sudo docker run -it -v /data/music:/app/public --detach --publish 3000:3000 music-player
+
+sudo docker image ls
+sudo docker image rm music-player
+
+sudo docker container ls
+sudo docker container rm <insert generated name>

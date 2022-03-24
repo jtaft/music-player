@@ -2,12 +2,14 @@ function filebuttonclick(value) {
   //value: /public/ or /public/music/
 
   var audioPlayer = document.getElementById('audio');
-  audioPlayer.src = value.replace('/public','');
+  //audioPlayer.src = value.replace('/public','');
+  audioPlayer.src = value;
   audioPlayer.setAttribute('muted', false);
   audioPlayer.removeAttribute('hidden');
 }
 
 function playallbuttonclick(files, path) {
+  console.log(path);
   //files:  "file1.mp3,file2.mp3"
   //path: "public" or "public/music/"
   if (files === "") {
@@ -16,7 +18,8 @@ function playallbuttonclick(files, path) {
 
   var musicQueue = [];
   var queueCounter = 0;
-  var relativePath = path.replace('public','');
+  //var relativePath = path.replace('public','');
+  var relativePath = "/" + path;
   console.log(relativePath);
   var fileArray = files.split(",");
   var audioPlayer = document.getElementById('audio');
